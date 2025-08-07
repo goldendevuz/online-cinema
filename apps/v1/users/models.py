@@ -22,7 +22,6 @@ phone_regex = RegexValidator(
 class User(AbstractUser, BaseModel):
     USER_ROLES = (
         (ORDINARY_USER, ORDINARY_USER),
-        (MANAGER, MANAGER),
         (ADMIN, ADMIN)
     )
     AUTH_TYPE_CHOICES = (

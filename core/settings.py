@@ -37,7 +37,6 @@ THIRD_APPS = {
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'phonenumbers',
-    'twilio',
     'corsheaders',
     'debug_toolbar',
     'import_export',
@@ -46,6 +45,7 @@ THIRD_APPS = {
 }
 
 LOCAL_APPS = [
+    'apps.v1.cinema',
     'apps.v1.users',
     'apps.v1.shared',
 ]
@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        "rest_framework.permissions.IsAuthenticated",
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
         # "apps.v1.shared.permissions.HasCompletedSignup",
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [

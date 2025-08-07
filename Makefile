@@ -27,7 +27,7 @@ migration:
 migrate:
 	python3 manage.py migrate
 startapp:
-	python manage.py startapp $(name) && mv $(name) apps/$(name)
+	python manage.py startapp $(name) && mv $(name) apps/v1/$(name)
 clear-linux:
 	find . -path "*/migrations/*.py" -not -name "__init__.py" -delete && find . -path "*/migrations/*.pyc"  -delete
 clear-windows:
